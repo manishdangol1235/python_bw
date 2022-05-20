@@ -11,4 +11,5 @@ def show_news_by_category(request, cid):
 
 
 def show_single_news(request, nid):
-    return HttpResponse(f'Single News {nid}')
+    # return HttpResponse(f'Single News {nid}')
+    return render(request, 'single.html')

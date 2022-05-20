@@ -7,7 +7,7 @@ from news.models import News
 def show_home(request):
     # https://www.codegrepper.com/
     categories = Category.objects.all()
-    business_news = News.objects.filter(category_id=2).order_by('-id')[:4]
+    business_news = News.objects.filter(category__title='Business').order_by('-id')[:4]
     return render(request, 'index.html', {'categories': categories, 'business_news': business_news})
 
 
